@@ -5,3 +5,5 @@ RHSA1
 3. Get help in RHEL
 4. Create, view and edit text files
 5. Manage local Linux users and groups
+6. Control acces to files with Linux file system permissions
+7. Monitor and Manage Linux processes
