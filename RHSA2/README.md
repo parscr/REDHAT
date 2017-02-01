@@ -6,3 +6,4 @@ RHSA2
 4. Schedule future Linux tasks.
 5. Manage priority of Linux processes.
 6. Control access to files with access control lists (ACL).
+7. Manage SELinux security
