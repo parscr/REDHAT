@@ -5,3 +5,9 @@ To create a local user:
 ```
 useradd parscr
 ```
+
+Remove a local user:
+
+```
+userdell parscr
+```
