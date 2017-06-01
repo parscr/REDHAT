@@ -9,8 +9,8 @@ RHCE
 7. Provide block-based storage.
 8. Provide file-based storage.
 9. Configure MariaDB database.
-10 Provide Apache HTTPD web service.
-11 Write Bash scripts.
-12 Bash conditionals and control structues.
-13 Configure the shell environment.
+10. Provide Apache HTTPD web service.
+11. Write Bash scripts.
+12. Bash conditionals and control structues.
+13. Configure the shell environment.
 
