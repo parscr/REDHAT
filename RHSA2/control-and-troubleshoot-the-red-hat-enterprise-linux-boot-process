@@ -12,8 +12,6 @@ Reset the password
 
 ```
 # mount -o remount,rw /sysroot
-```
-```
 # chroot /sysroot
 ```
 
