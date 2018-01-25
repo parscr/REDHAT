@@ -1,4 +1,4 @@
-###Reset the Root Password
+#Reset the Root Password
 
 Enter Emergency mode
 
@@ -11,23 +11,23 @@ start the boot process by pressing CTRL+x
 Reset the password
 
 ```
-# mount -o remount,rw /sysroot
-# chroot /sysroot
+#mount -o remount,rw /sysroot
+#chroot /sysroot
 ```
 
 Change the password
 
 ```
-# passwd
+#passwd
 ```
 
 SELinux relabel
 ```
-# touch /.autorelabel
+#touch /.autorelabel
 ```
 
 Exit from the shell and reboot
 
 ```
-reboot
+#reboot
 ```
