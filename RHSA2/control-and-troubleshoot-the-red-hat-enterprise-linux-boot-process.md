@@ -13,13 +13,13 @@ set a default target
 systemctl set-default graphical.target
 ```
 
-*runlevel0.target -> poweroff.target
-*runlevel1.target -> rescue.target
-*runlevel2.target -> multi-user.target
-*runlevel3.target -> multi-user.target
-*runlevel4.target -> multi-user.target
-*runlevel5.target -> graphical.target
-*runlevel6.target -> reboot.target
+1. runlevel0.target -> poweroff.target
+2. runlevel1.target -> rescue.target
+3. runlevel2.target -> multi-user.target
+4. runlevel3.target -> multi-user.target
+5. runlevel4.target -> multi-user.target
+6. runlevel5.target -> graphical.target
+7. runlevel6.target -> reboot.target
 
 # Reset the Root Password
 
