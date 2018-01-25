@@ -1,3 +1,26 @@
+# Runlevel-Target
+systemd uses ‘targets’ instead of runlevels. By default, there are two main targets:
+
+multi-user.target: analogous to runlevel 3
+
+graphical.target: analogous to runlevel 5
+
+```
+systemctl get-default
+```
+set a default target
+```
+systemctl set-default graphical.target
+```
+
+runlevel0.target -> poweroff.target
+runlevel1.target -> rescue.target
+runlevel2.target -> multi-user.target
+runlevel3.target -> multi-user.target
+runlevel4.target -> multi-user.target
+runlevel5.target -> graphical.target
+runlevel6.target -> reboot.target
+
 # Reset the Root Password
 
 * Reboot and enter the grub menu by pressing the **'e'** button 
