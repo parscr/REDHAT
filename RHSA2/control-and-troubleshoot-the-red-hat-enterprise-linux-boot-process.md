@@ -1,9 +1,17 @@
+## Boot, reboot, and shutdown
+
+```
+systemct poweroff
+```
+```
+systemctl reboot
+```
+
 ## Runlevel-Target
 systemd uses ‘targets’ instead of runlevels. By default, there are two main targets:
 
-multi-user.target: analogous to runlevel 3
-
-graphical.target: analogous to runlevel 5
+multi-user.target: runlevel 3
+graphical.target: runlevel 5
 
 ```
 systemctl get-default
@@ -11,6 +19,10 @@ systemctl get-default
 set a default target
 ```
 systemctl set-default graphical.target
+```
+On a running system switch to a diffrent target
+```
+systemctl isolate multi-user.target
 ```
 
 1. runlevel0.target -> poweroff.target
