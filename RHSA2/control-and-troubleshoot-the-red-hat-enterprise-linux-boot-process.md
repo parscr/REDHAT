@@ -1,4 +1,4 @@
-# Runlevel-Target
+## Runlevel-Target
 systemd uses ‘targets’ instead of runlevels. By default, there are two main targets:
 
 multi-user.target: analogous to runlevel 3
@@ -21,7 +21,7 @@ systemctl set-default graphical.target
 6. runlevel5.target -> graphical.target
 7. runlevel6.target -> reboot.target
 
-# Reset the Root Password
+## Reset the Root Password
 
 * Reboot and enter the grub menu by pressing the **'e'** button 
 
@@ -29,25 +29,25 @@ systemctl set-default graphical.target
 
 * start the boot process by pressing CTRL+x
 
-### remount the partition with Read/Wrire flags
+###### remount the partition with Read/Wrire flags
 
 ```
 #mount -o remount,rw /sysroot
 #chroot /sysroot
 ```
 
-### Change the password
+###### Change the password
 
 ```
 #passwd
 ```
 
-### SELinux relabel
+###### SELinux relabel
 ```
 #touch /.autorelabel
 ```
 
-### Exit from the shell and reboot
+###### Exit from the shell and reboot
 
 ```
 #reboot
