@@ -1,7 +1,7 @@
 ## Boot, reboot, and shutdown
 
 ```
-systemct poweroff
+systemctl poweroff
 ```
 ```
 systemctl reboot
