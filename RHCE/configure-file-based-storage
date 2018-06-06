@@ -1,6 +1,8 @@
 Provide file-based storage
 NFS exports and SMB files shares.
 
+# SAMBA
+
 Install the samba package
 
 ```
@@ -15,4 +17,11 @@ winbindd
 
 ```
 systemctl enable smb nmb
+```
+
+Allow samba serice.
+
+```
+firewall-cmd --permanent --add-service=samba
+firewall-cmd --reload
 ```
