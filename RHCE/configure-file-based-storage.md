@@ -11,11 +11,9 @@ yum install samba
 
 Samba Daemons and Services
 
-smbd
-
-nmb
-
-winbind
+smbd  
+nmb  
+winbind  
 
 ```
 systemctl enable smb nmb
