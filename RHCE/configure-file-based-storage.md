@@ -12,8 +12,10 @@ yum install samba
 Samba Daemons and Services
 
 smbd
+
 nmb
-winbindd
+
+winbind
 
 ```
 systemctl enable smb nmb
@@ -30,8 +32,8 @@ Configuring a Samba Server
 The default configuration file /etc/samba/smb.conf
 
 Command-Line Configuration
-Samba uses /etc/samba/smb.conf as its configuration file. 
-If you change this configuration file, the changes do not take effect until you restart the Samba daemon 
+Samba uses /etc/samba/smb.conf as its configuration file.
+If you change this configuration file, the changes do not take effect until you restart the Samba daemon
 with the following command, as root:
 
 ```
