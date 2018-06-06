@@ -1,6 +1,17 @@
 Provide file-based storage
 NFS exports and SMB files shares.
 
+Install the samba package
 ````
 yum install samba
+````
+
+Samba Daemons and Services
+
+smbd
+nmb
+winbindd
+
+````
+systemctl enable smb nmb
 ````
