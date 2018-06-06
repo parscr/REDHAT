@@ -37,3 +37,13 @@ with the following command, as root:
 ```
 systemctl restart smb.service
 ```
+
+Prepare shared direcories
+
+/srv/samba_pub		a public share
+/srv/samba_group 	a group share
+
+```
+mkdir /srv/{samba_pub,samba_group}
+```
+
