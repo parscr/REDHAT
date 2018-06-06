@@ -1,2 +1,6 @@
 Provide file-based storage
 NFS exports and SMB files shares.
+
+````
+yum install samba
+````
