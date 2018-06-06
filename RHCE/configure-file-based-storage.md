@@ -29,7 +29,6 @@ firewall-cmd --reload
 Configuring a Samba Server
 The default configuration file /etc/samba/smb.conf
 
-Command-Line Configuration
 Samba uses /etc/samba/smb.conf as its configuration file.
 If you change this configuration file, the changes do not take effect until you restart the Samba daemon
 with the following command, as root:
@@ -40,10 +39,15 @@ systemctl restart smb.service
 
 Prepare shared direcories
 
-/srv/samba_pub		a public share
-/srv/samba_group 	a group share
+/srv/samba_pub		a public share  
+/srv/samba_group 	a group share  
 
 ```
 mkdir /srv/{samba_pub,samba_group}
 ```
 
+Make backup of smb.conf
+
+``` 
+cp /etc/samba/smb.conf /etc/samba/smb.conf.`date -I`
+```
