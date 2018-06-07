@@ -19,7 +19,7 @@ winbind
 systemctl enable smb nmb
 ```
 
-Allow samba serice.
+Allow samba service.
 
 ```
 firewall-cmd --permanent --add-service=samba
@@ -66,8 +66,8 @@ vi /etc/samba/smb.conf
 	security = user
 	guest account = nobody
 	map to guest = Bad user
-	server string = engs-glyme Samba server sharing samba_pub and samba_group
- 	netbios name = engs-glyme
+	server string = RHCE Samba server sharing ansys_docs, scratch and samba_group
+ 	netbios name = RHCE
 
 	passdb backend = tdbsam
 
@@ -125,13 +125,11 @@ New SMB passwd:
 Retype new SMB password:
 Added user dev1.
 
-
 smbpasswd -a dev2
 New SMB passwd:
 Retype new SMB password:
 Added user dev2.
 ```
-
 
 ```
 [DEVOPS]
