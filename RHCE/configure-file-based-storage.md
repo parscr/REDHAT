@@ -38,14 +38,14 @@ with the following command, as root:
 systemctl restart smb.service
 ```
 
-Prepare shared direcories
+Prepare shared directories
 
 /srv/ansys_docs		a read-only-share  
 /srv/scratch		a read-write-share all-users  
 /srv/samba_group 	a group share  
 
 ```
-mkdir /srv/{samba_pub,samba_group}
+mkdir /srv/{ansys_docs,scratch,devops_group}
 ```
 
 Make backup of smb.conf
@@ -104,3 +104,12 @@ chown -R nobody: /srv/scratch/
         guest ok = yes
         read only = no
 ```
+
+group share read-write-for-devops-group   
+We want to give read-only privileges for all users who are not members of the devops group    
+
+```
+[DEVOPS]
+	comment = devops group share
+	path = /srv/devops_group
+``` 
