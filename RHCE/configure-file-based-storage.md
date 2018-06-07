@@ -94,7 +94,7 @@ read-write share all users
 mkdir /srv/scratch  
 chmod -R 0755 /srv/scratch/  
 chown -R nobody: /srv/scratch/  
-``
+```
 
 ```
 [SCRATCH]
