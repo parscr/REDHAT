@@ -23,7 +23,8 @@ Allow samba serice.
 
 ```
 firewall-cmd --permanent --add-service=samba
-firewall-cmd --reload
+firewall-cmd --reload  
+firewall-cmd --list-all  
 ```
 
 Configuring a Samba Server
@@ -50,4 +51,35 @@ Make backup of smb.conf
 
 ``` 
 cp /etc/samba/smb.conf /etc/samba/smb.conf.`date -I`
+```
+
+Configure the samba server
+
+```
+vi /etc/samba/smb.conf
+```
+
+```
+[global]
+	workgroup = RHCE
+	security = user
+	guest account = nobody
+	map to guest = Bad user
+	server string = engs-glyme Samba server sharing samba_pub and samba_group
+ 	netbios name = engs-glyme
+
+	passdb backend = tdbsam
+
+	printing = cups
+	printcap name = cups
+	load printers = yes
+	cups options = raw
+
+```
+
+[ANSYS_DOCS]
+	comment = ANSYS_DOCS Read-Only-Samba-Share
+	path = /srv/samba_pub
+	readonly = yes
+	guest ok = yes
 ```
