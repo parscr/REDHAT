@@ -76,7 +76,7 @@ vi /etc/samba/smb.conf
 	cups options = raw
 
 ```
-
+```
 [ANSYS_DOCS]
 	comment = ANSYS_DOCS Read-Only-Samba-Share
 	path = /srv/samba_pub
