@@ -42,7 +42,7 @@ Prepare shared directories
 
 /srv/ansys_docs		a read-only-share  
 /srv/scratch		a read-write-share all-users  
-/srv/samba_group 	a group share  
+/srv/devops_group 	a group share  
 
 ```
 mkdir /srv/{ansys_docs,scratch,devops_group}
@@ -124,6 +124,12 @@ smbpasswd -a dev1
 New SMB passwd:
 Retype new SMB password:
 Added user dev1.
+
+
+smbpasswd -a dev2
+New SMB passwd:
+Retype new SMB password:
+Added user dev2.
 ```
 
 
