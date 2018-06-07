@@ -109,7 +109,27 @@ group share read-write-for-devops-group
 We want to give read-only privileges for all users who are not members of the devops group    
 
 ```
+groupadd -r devops
+chgrp devops /srv/devops_group
+chmod 2775 /srv/devops_group
+```
+
+```
+useradd -s /sbin/nologin -G devops dev1
+useradd -s /sbin/nologin dev2
+````
+
+```
+smbpasswd -a dev1
+New SMB passwd:
+Retype new SMB password:
+Added user dev1.
+```
+
+
+```
 [DEVOPS]
 	comment = devops group share
 	path = /srv/devops_group
+	write lisr = @devops
 ``` 
