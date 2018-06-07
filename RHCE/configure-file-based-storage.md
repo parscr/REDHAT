@@ -40,7 +40,8 @@ systemctl restart smb.service
 
 Prepare shared direcories
 
-/srv/samba_pub		a public share  
+/srv/ansys_docs		a read-only-share  
+/srv/scratch		a read-write-share all-users  
 /srv/samba_group 	a group share  
 
 ```
@@ -76,10 +77,30 @@ vi /etc/samba/smb.conf
 	cups options = raw
 
 ```
+read-only share 
+
 ```
 [ANSYS_DOCS]
 	comment = ANSYS_DOCS Read-Only-Samba-Share
-	path = /srv/samba_pub
+	path = /srv/ansys_docs
 	readonly = yes
 	guest ok = yes
+```
+
+
+read-write share all users
+
+```
+mkdir /srv/scratch  
+chmod -R 0755 /srv/scratch/  
+chown -R nobody: /srv/scratch/  
+``
+
+```
+[SCRATCH]
+        comment = SCRATCH_SPACE all-users-read-write
+        path = /srv/scratch
+        browsable = yes
+        guest ok = yes
+        read only = no
 ```
