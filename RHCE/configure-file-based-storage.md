@@ -1,6 +1,16 @@
 Provide file-based storage
 NFS exports and SMB files shares.
 
+# NFS
+
+Install the NFS package
+
+```
+yum install nfs
+```
+
+
+
 # SAMBA
 
 Install the samba package
