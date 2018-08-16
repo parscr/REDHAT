@@ -9,6 +9,25 @@ Install the NFS package
 yum install nfs
 ```
 
+Allow the NFS Service.
+
+```
+firewall-cmd --permanent --add-service=nfs
+firewall-cmd --reload  
+firewall-cmd --list-all  
+```
+
+Edit /etc/exports
+
+```
+/software 163.1.164.0/23(rw,sync)
+```
+
+Export the filesystem
+
+```
+exportfs -av
+```
 # AUTOFS
 
 ```
@@ -150,5 +169,5 @@ Added user dev2.
 [DEVOPS]
 	comment = devops group share
 	path = /srv/devops_group
-	write lisr = @devops
+	write list = @devops
 ``` 
