@@ -1,7 +1,7 @@
 Provide file-based storage
 NFS exports and SMB files shares.
 
-# NFS
+# NFS Server
 
 Install the NFS package
 
@@ -28,6 +28,9 @@ Export the filesystem
 ```
 exportfs -av
 ```
+
+# NFS Client
+
 # AUTOFS
 
 ```
