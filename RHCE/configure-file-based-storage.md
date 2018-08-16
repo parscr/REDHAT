@@ -9,6 +9,11 @@ Install the NFS package
 yum install nfs
 ```
 
+# AUTOFS
+
+```
+yum install autofs
+```
 
 
 # SAMBA
