@@ -25,6 +25,20 @@ If you make a mistake you can remove with
 #pvremove /dev/sdc
 ```
 
+If you get the error below when doing a pvcreate.
+
+```
+pvcreate /dev/sdc
+Device /dev/sdb excluded by a filter.
+```
+
+If you are using a whole disk device for your physical volume, the disk must have no partition table. For DOS disk partitions, the partition id should be set to 0x8e using the fdisk or cfdisk command or an equivalent. For whole disk devices only the partition table must be erased, which will effectively destroy all data on that disk. You can remove an existing partition table by zeroing the first sector with the following command:
+
+```
+dd if=/dev/zero of=/dev/sdb bs=512 count=1
+```
+
+
 Now we create a volume group called vg_datapart1
 
 ```
