@@ -54,6 +54,7 @@ winbind
 
 ```
 systemctl enable smb nmb
+systemctl start smb nmb
 ```
 
 Allow samba service.
