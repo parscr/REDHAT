@@ -1,17 +1,18 @@
-## Manage logical volume management (LVM) storage.
+ ## Manage logical volume management (LVM) storage.
 
 Adding a disk LVM
 
 To show the available disks.
-```
+
+ ```
 #fdisk -l
-```
+ ```
 We assume our new disk is /dev/sdc and we will not create a partition on it but use /dev/sdc as it is. 
 This gives us the advantage that if we increase the disksize outside of the OS
 
-```
+ ```
 #pvcreate /dev/sdc
-```
+ ```
 You can check what you have created by using
 
 ```
