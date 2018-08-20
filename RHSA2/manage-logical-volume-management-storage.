@@ -1,12 +1,13 @@
 ## Manage logical volume management (LVM) storage.
 
 Adding a disk LVM
-To show the available disks.
 
+To show the available disks.
 ```
 #fdisk -l
 ```
-We assume our new disk is /dev/sdc and we will not create a partition on it but use /dev/sdc as it is. This gives us the advantage that if we increase the disksize outside of the OS
+We assume our new disk is /dev/sdc and we will not create a partition on it but use /dev/sdc as it is. 
+This gives us the advantage that if we increase the disksize outside of the OS
 
 ```
 #pvcreate /dev/sdc
@@ -75,17 +76,17 @@ Get UUID for /etc/fstab
 example output
 
 ```
-    /dev/block/8:2: UUID="iS1aIl-cvGX-MaAm-WrRJ-9m5U-AWvk-F0YZ1c" TYPE="LVM2_member"
-    /dev/block/253:1: UUID="6085f9f1-e5c7-4030-8472-0cd7aeb22998" TYPE="xfs"
-    /dev/block/8:1: UUID="32d7dd18-3c7f-4ddd-a7f0-5fd6b575a51c" TYPE="xfs"
-    /dev/block/253:0: UUID="808996b2-33dd-44c3-abe3-95ebd977cf90" TYPE="swap"
-    /dev/dm-1: UUID="6085f9f1-e5c7-4030-8472-0cd7aeb22998" TYPE="xfs"
-    /dev/sda1: UUID="32d7dd18-3c7f-4ddd-a7f0-5fd6b575a51c" TYPE="xfs"
-    /dev/dm-0: UUID="808996b2-33dd-44c3-abe3-95ebd977cf90" TYPE="swap"
-    /dev/sdc: UUID="qGtaOX-s3Z3-VS0d-5iuu-eA9f-mul7-nDsoaD" TYPE="LVM2_member"
-    /dev/sdb1: LABEL="DATAPART1" UUID="AED61027D60FEE81" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="d3f886a4-4282-4dbb-b6f8-cd7bf6549600"
-    /dev/mapper/vg_datapart1-lv_datapart1: UUID="3e7d0b26-e993-4a96-a653-462337863252" TYPE="xfs"
-    /dev/mapper/centos-home: UUID="99841ecc-1d6c-4ce0-86e4-79c9e1555e3f" TYPE="xfs"
+/dev/block/8:2: UUID="iS1aIl-cvGX-MaAm-WrRJ-9m5U-AWvk-F0YZ1c" TYPE="LVM2_member"
+/dev/block/253:1: UUID="6085f9f1-e5c7-4030-8472-0cd7aeb22998" TYPE="xfs"
+/dev/block/8:1: UUID="32d7dd18-3c7f-4ddd-a7f0-5fd6b575a51c" TYPE="xfs"
+/dev/block/253:0: UUID="808996b2-33dd-44c3-abe3-95ebd977cf90" TYPE="swap"
+/dev/dm-1: UUID="6085f9f1-e5c7-4030-8472-0cd7aeb22998" TYPE="xfs"
+/dev/sda1: UUID="32d7dd18-3c7f-4ddd-a7f0-5fd6b575a51c" TYPE="xfs"
+/dev/dm-0: UUID="808996b2-33dd-44c3-abe3-95ebd977cf90" TYPE="swap"
+/dev/sdc: UUID="qGtaOX-s3Z3-VS0d-5iuu-eA9f-mul7-nDsoaD" TYPE="LVM2_member"
+/dev/sdb1: LABEL="DATAPART1" UUID="AED61027D60FEE81" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="d3f886a4-4282-4dbb-b6f8-cd7bf6549600"
+/dev/mapper/vg_datapart1-lv_datapart1: UUID="3e7d0b26-e993-4a96-a653-462337863252" TYPE="xfs"
+/dev/mapper/centos-home: UUID="99841ecc-1d6c-4ce0-86e4-79c9e1555e3f" TYPE="xfs"
 ```
 
 ```
