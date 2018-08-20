@@ -6,7 +6,7 @@ NFS exports and SMB files shares.
 Install the NFS package
 
 ```
-yum install nfs
+yum install nfs-utils
 ```
 
 Enable and start the nfs service.
@@ -31,6 +31,11 @@ Edit /etc/exports
 ```
 /software 163.1.164.0/23(rw,sync)
 ```
+
+/software		 
+163.1.164.0/23
+rw			 allow clients read write access to the share.
+sync
 
 Export the filesystem
 
