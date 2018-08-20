@@ -9,6 +9,13 @@ Install the NFS package
 yum install nfs
 ```
 
+```
+systemctl enable nfs.service
+systemctl start nfs.service
+systemctl status nfs.service
+
+
+
 Allow the NFS Service.
 
 ```
