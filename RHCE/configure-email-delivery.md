@@ -25,7 +25,7 @@ postfix-null-client Manual Install.
 6. relayhost = [smtp.ox.ac.uk]:25
 7. disable_dns_lookups = yes
 
-Line 1. FQDN of the postfix server
+Line 1. FQDN of the postfix server;
 Line 2. Domainname of the postfix server
 Line 3. Send mail as "user@example.com" (instead of "user@hostname.example.com")
 Line 4. Do not accept mail from the network.
