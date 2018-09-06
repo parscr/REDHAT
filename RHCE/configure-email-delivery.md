@@ -7,8 +7,8 @@ postfix-null-client Manual Install.
 #yum install postfix
 ```
 ```
-#systemctl start postfix
 #systemctl enable postfix
+#systemctl start postfix
 ```
 ```
 #firewall-cmd --permanent --add-service=smtp
