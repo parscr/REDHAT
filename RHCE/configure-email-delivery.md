@@ -51,9 +51,10 @@ Check the log files
 #tail /var/log/maillog
 #journalctl -u postfix.service
 ```
-
+Check postfix.service is running
 ```
 #systemctl –l status postfix
-#postconf –n
+```
+```
 #postqueue
 ```
