@@ -46,14 +46,14 @@ Restart the postfix service
 ```
 ### Troubleshooting 
 
-Check log files
+Check the log files
 ```
-tail /var/log/maillog
+#tail /var/log/maillog
+#journalctl –xn
 ```
 
 ```
 #systemctl –l status postfix
-#journalctl –xn
 #postconf –n
 #postqueue
 ```
