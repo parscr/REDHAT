@@ -3,16 +3,20 @@
 null client. A null client is a machine that can only send mail. It receives no mail from the network, and it does not deliver any mail locally
 
 postfix-null-client Manual Install.
+```
 #yum install postfix
-
+```
+```
 #systemctl start postfix
 #systemctl enable postfix
-
+```
+```
 #firewall-cmd --permanent --add-service=smtp
 #firewall-cmd --add-service=smtp
-
+```
+```
 #vi /etc/postfix/main.cf
-
+```
 1. myhostname = engs-XXXX.eng.ox.ac.uk 
 2. mydomain = eng.ox.ac.uk 
 3. myorigin = $mydomain 
@@ -29,8 +33,9 @@ Line 5. Leave blank so mail is saved on the central mail server Not clinet
 Line 6. Where Postfix should send all outgoing mail
 line 7. If set to yes postfix will not perfrom DNS lookups to resolve the hostname
 
+```
 #systemctl restart postfix
-
+```
 
 #systemctl –l status postfix
 #journalctl –xn
