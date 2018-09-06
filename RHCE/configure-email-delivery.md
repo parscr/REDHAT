@@ -35,6 +35,13 @@ Line 6. Where Postfix should send all outgoing mail
 line 7. If set to yes postfix will not perfrom DNS lookups to resolve the hostname
 ```
 ```
+Review & Check /etc/main.cf
+```
+#postconf -n
+#postfix check
+```
+Restart the postfix service
+```
 #systemctl restart postfix
 ```
 ```
