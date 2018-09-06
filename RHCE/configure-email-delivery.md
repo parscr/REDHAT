@@ -45,8 +45,8 @@ Restart the postfix service
 #systemctl restart postfix
 
 ### Troubleshooting 
-```
-log files
+
+Check log files
 ```
 tail /var/log/maillog
 ```
