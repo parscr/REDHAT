@@ -50,6 +50,8 @@ Check log files
 ```
 tail /var/log/maillog
 ```
+
+```
 #systemctl –l status postfix
 #journalctl –xn
 #postconf –n
