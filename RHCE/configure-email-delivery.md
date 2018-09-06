@@ -1,6 +1,6 @@
 # Configure email delivery
 
-null client. A null client is a machine that can only send mail. It receives no mail from the network, and it does not deliver any mail locally
+## null client. A null client is a machine that can only send mail. It receives no mail from the network, and it does not deliver any mail locally
 
 postfix-null-client Manual Install.
 ```
