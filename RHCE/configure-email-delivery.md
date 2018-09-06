@@ -43,7 +43,7 @@ Review & Check /etc/main.cf
 Restart the postfix service
 ```
 #systemctl restart postfix
-
+```
 ### Troubleshooting 
 
 Check log files
