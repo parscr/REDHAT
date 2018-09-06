@@ -36,7 +36,8 @@ line 7. If set to yes postfix will not perfrom DNS lookups to resolve the hostna
 ```
 #systemctl restart postfix
 ```
-
+```
 #systemctl –l status postfix
 #journalctl –xn
 #postconf –n
+```
