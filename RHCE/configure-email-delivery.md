@@ -50,6 +50,7 @@ Check the log files
 ```
 #tail /var/log/maillog
 #journalctl –xn
+#journalctl -u postfi
 ```
 
 ```
