@@ -43,9 +43,15 @@ Review & Check /etc/main.cf
 Restart the postfix service
 ```
 #systemctl restart postfix
+
+### Troubleshooting 
 ```
+log files
+```
+tail /var/log/maillog
 ```
 #systemctl –l status postfix
 #journalctl –xn
 #postconf –n
+#postqueue
 ```
