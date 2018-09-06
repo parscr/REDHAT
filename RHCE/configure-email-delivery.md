@@ -26,17 +26,11 @@ postfix-null-client Manual Install.
 7. disable_dns_lookups = yes
 
 Line 1. FQDN of the postfix server
-
 Line 2. Domainname of the postfix server
-
 Line 3. Send mail as "user@example.com" (instead of "user@hostname.example.com")
-
 Line 4. Do not accept mail from the network.
-
 Line 5. Leave blank so mail is saved on the central mail server Not clinet
-
 Line 6. Where Postfix should send all outgoing mail
-
 line 7. If set to yes postfix will not perfrom DNS lookups to resolve the hostname
 
 ```
