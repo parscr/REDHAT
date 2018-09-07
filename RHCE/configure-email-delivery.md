@@ -56,5 +56,6 @@ Check postfix.service is running
 #systemctl –l status postfix
 ```
 ```
-#postqueue
+#postqueue -p
+#postqueue -f 
 ```
