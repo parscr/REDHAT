@@ -59,3 +59,8 @@ Check postfix.service is running
 #postqueue -p
 #postqueue -f 
 ```
+
+Help
+```
+less /usr/share/doc/postfix-2*/README_FILES/STANDARD_CONFIGURATION_README
+```
