@@ -1,1 +1,6 @@
-# Provide Apache HTTPD web service
+Provide Apache HTTPD web service
+
+Install HTTPD
+```
+yum groupinstall 
+```
