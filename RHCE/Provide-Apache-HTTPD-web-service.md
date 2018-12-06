@@ -2,5 +2,5 @@
 
 #### Install HTTPD
 ```
-yum groupinstall 
+yum groupinstall web server
 ```
