@@ -24,9 +24,25 @@ systemctl reload httpd.service
 systemctl restart httpd.service
 systemctl status httpd.service
 ```
-## Configure Firewalld.
+### Configure Firewalld.
 ```
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --zone=public --permanent --add-service=https
 firewall-cmd --reload
+```
+### Virtual host
+```
+sudo mkdir -p /var/www/html/download.eng.ox.ac.uk/{public_html,logs}
+```
+```
+vim /etc/httpd/conf.d/download.eng.ox.ac.uk.conf
+
+<VirtualHost *:80>
+    ServerAdmin craig.parsons@eng.ox.ac.uk
+    ServerName download.eng.ox.ac.uk
+    ServerAlias www.download.eng.ox.ac.uk
+    DocumentRoot /var/www/html/download.eng.ox.ac.uk/public_html/
+    ErrorLog /var/www/html/download.eng.ox.ac.uk/logs/error.log
+    CustomLog /var/www/html/download.eng.ox.ac.uk/logs/access.log combined
+</VirtualHost>
 ```
