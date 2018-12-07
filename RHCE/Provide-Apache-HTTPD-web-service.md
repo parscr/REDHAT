@@ -35,8 +35,10 @@ firewall-cmd --reload
 sudo mkdir -p /var/www/html/download.eng.ox.ac.uk/{public_html,logs}
 ```
 ```
+```
 vim /etc/httpd/conf.d/download.eng.ox.ac.uk.conf
-
+```
+```
 <VirtualHost *:80>
     ServerAdmin craig.parsons@eng.ox.ac.uk
     ServerName download.eng.ox.ac.uk
