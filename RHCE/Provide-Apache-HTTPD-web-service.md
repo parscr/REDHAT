@@ -16,7 +16,7 @@ yum group info "Web Server"
 yum group install "Web Server"
 ```
 
-### enable on boot stop/start/restart
+### enable on boot start/reload/restart/status
 ```
 systemctl enable httpd.sevice
 systemctl start httpd.service
