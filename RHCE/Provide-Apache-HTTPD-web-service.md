@@ -18,9 +18,9 @@ yum group install "Web Server"
 
 ### enable stop/start/restart
 ```
-systemctl enable httpd
-systemctl start httpd
-systemctl reload httpd
+systemctl enable httpd.sevice
+systemctl start httpd.service
+systemctl reload httpd.service
 systemctl restart httpd.service
-systemctl status httpd
+systemctl status httpd.service
 ```
