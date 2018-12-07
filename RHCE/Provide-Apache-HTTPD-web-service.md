@@ -24,3 +24,9 @@ systemctl reload httpd.service
 systemctl restart httpd.service
 systemctl status httpd.service
 ```
+## Configure Firewalld.
+```
+firewall-cmd --zone=public --permanent --add-service=http
+firewall-cmd --zone=public --permanent --add-service=https
+firewall-cmd --reload
+```
