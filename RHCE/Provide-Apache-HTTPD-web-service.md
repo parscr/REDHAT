@@ -47,3 +47,12 @@ vim /etc/httpd/conf.d/download.eng.ox.ac.uk.conf
     CustomLog /var/www/html/download.eng.ox.ac.uk/logs/access.log combined
 </VirtualHost>
 ```
+
+### Check Syntax/Version
+
+```
+httpd -t
+httpd -v
+```
+
+
