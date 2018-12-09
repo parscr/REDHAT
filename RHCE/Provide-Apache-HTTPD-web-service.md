@@ -32,19 +32,19 @@ firewall-cmd --reload
 ```
 ### Virtual host
 ```
-sudo mkdir -p /var/www/html/download.eng.ox.ac.uk/{public_html,logs}
+sudo mkdir -p /var/www/html/download.example.ox.ac.uk/{public_html,logs}
 ```
 ```
-vim /etc/httpd/conf.d/download.eng.ox.ac.uk.conf
+vim /etc/httpd/conf.d/download.example.ox.ac.uk.conf
 ```
 ```
 <VirtualHost *:80>
-    ServerAdmin craig.parsons@eng.ox.ac.uk
+    ServerAdmin craig.parsons@example.ox.ac.uk
     ServerName download.eng.ox.ac.uk
-    ServerAlias www.download.eng.ox.ac.uk
-    DocumentRoot /var/www/html/download.eng.ox.ac.uk/public_html/
-    ErrorLog /var/www/html/download.eng.ox.ac.uk/logs/error.log
-    CustomLog /var/www/html/download.eng.ox.ac.uk/logs/access.log combined
+    ServerAlias www.download.example.ox.ac.uk
+    DocumentRoot /var/www/html/download.example.ox.ac.uk/public_html/
+    ErrorLog /var/www/html/download.example.ox.ac.uk/logs/error.log
+    CustomLog /var/www/html/download.example.ox.ac.uk/logs/access.log combined
 </VirtualHost>
 ```
 
@@ -54,5 +54,24 @@ vim /etc/httpd/conf.d/download.eng.ox.ac.uk.conf
 httpd -t
 httpd -v
 ```
+### Moving Virtual hosts location.
 
+vim /etc/httpd/conf.d/download.example.ox.ac.uk.conf
+```
+```
+<VirtualHost *:80>
+    ServerAdmin craig.parsons@example.ox.ac.uk
+    ServerName download.example.ox.ac.uk
+    ServerAlias www.download.example.ox.ac.uk
+    DocumentRoot /var/www/html/download.example.ox.ac.uk/public_html/
+    ErrorLog /var/www/html/download.example.ox.ac.uk/logs/error.log
+    CustomLog /var/www/html/download.example.ox.ac.uk/logs/access.log combined
+</VirtualHost>
+
+<Directory /datapart1/www/html>
+            Options Indexes FollowSymLinks
+            Require all granted
+            AllowOverrride None
+</Directory>
+```
 
