@@ -55,7 +55,7 @@ httpd -t
 httpd -v
 ```
 ### Moving Virtual hosts location.
-
+```
 vim /etc/httpd/conf.d/download.example.ox.ac.uk.conf
 ```
 ```
