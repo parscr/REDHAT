@@ -12,5 +12,5 @@ RHSA2
 10. Manage logical volume management (LVM) storage.
 11. Access networked attached storage with network file system (NFS).
 12. Access networked storage with SMB.
-13. Control and troubleshoot the Red Hat Enterprise Linux boot process.
+13. Control and troubleshoot the Red Hat Enterprise Linux boot process. :ballot_box_with_check:
 14. Limit network communication with firewall.
