@@ -9,11 +9,11 @@ yum install firewalld
 systemctl enable firewalld.service
 systemctl start firewalld.service
 ```
-##Mask the iptables service which will prevent iptables from being started by another services:
+##  Mask the iptables service which will prevent iptables from being started by another services:
 ```
 systemctl mask iptables
 systemctl mask ip6tables
-
+```
 ## check current firewall state rules
 ```
 firewall-cmd --state
