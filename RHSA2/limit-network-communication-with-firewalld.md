@@ -20,21 +20,27 @@ firewall-cmd --state
 firewall-cmd --get-default-zone
 firewall-cmd --list-all
 firewall-cmd --get-active-zones
+systemctl status firewalld
 ```
-## add a service
+Firewalld uses two configuration sets: Runtime and Permanent. Runtime configuration changes are not retained on reboot
+
+## add a runtime service
 ```
 firewall-cmd --zone=public --add-service=http
 firewall-cmd --zone=public --list-services
+```
+## add a permanent service
+```
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --zone=public --permanent --list-services
 ```
-## add a port
+## add a runtime port
 ```
 firewall-cmd --zone=public --add-port=6007/tcp
 firewall-cmd --zone=public --add-port=6007/udp
 firewall-cmd --zone=public --list-ports
 ```
-## permanent firewall
+## add a permanent port
 ```
 firewall-cmd --zone=public --permanent --add-port=6007/tcp
 firewall-cmd --zone=public --permanent --add-port=6007/udp
