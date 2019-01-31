@@ -1,9 +1,9 @@
-## Limit network communication with firewalld.
+### Limit network communication with firewalld.
 
-Install firewalld
+## Install firewalld
 ```
 yum install firewalld
-``
+```
 start and enable firewalld
 ```
 systemctl enable firewalld.service
