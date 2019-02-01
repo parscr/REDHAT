@@ -24,15 +24,19 @@ systemctl status firewalld
 ```
 Firewalld uses two configuration sets: Runtime and Permanent. Runtime configuration changes are not retained on reboot
 
-### add a runtime service
+### add/remove a runtime service
 ```
 firewall-cmd --zone=public --add-service=http
 firewall-cmd --zone=public --list-services
+
+firewall-cmd --zone=public --remove-service=http 
 ```
-### add a permanent service
+### add/remove a permanent service
 ```
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --zone=public --permanent --list-services
+
+firewall-cmd --zone=public --remove-service=http --permanent
 ```
 ### add a runtime port
 ```
