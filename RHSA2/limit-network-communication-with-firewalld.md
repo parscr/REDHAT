@@ -1,20 +1,20 @@
-### Limit network communication with firewalld.
+## Limit network communication with firewalld.
 
-## Install firewalld
+### Install firewalld
 ```
 yum install firewalld
 ```
-## start and enable firewalld
+### start and enable firewalld
 ```
 systemctl enable firewalld.service
 systemctl start firewalld.service
 ```
-##  Mask the iptables service which will prevent iptables from being started by another services:
+###  Mask the iptables service which will prevent iptables from being started by another services:
 ```
 systemctl mask iptables
 systemctl mask ip6tables
 ```
-## check current firewall state rules
+### check current firewall state rules
 ```
 firewall-cmd --state
 firewall-cmd --get-default-zone
@@ -24,33 +24,33 @@ systemctl status firewalld
 ```
 Firewalld uses two configuration sets: Runtime and Permanent. Runtime configuration changes are not retained on reboot
 
-## add a runtime service
+### add a runtime service
 ```
 firewall-cmd --zone=public --add-service=http
 firewall-cmd --zone=public --list-services
 ```
-## add a permanent service
+### add a permanent service
 ```
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --zone=public --permanent --list-services
 ```
-## add a runtime port
+### add a runtime port
 ```
 firewall-cmd --zone=public --add-port=6007/tcp
 firewall-cmd --zone=public --add-port=6007/udp
 firewall-cmd --zone=public --list-ports
 ```
-## add a permanent port
+### add a permanent port
 ```
 firewall-cmd --zone=public --permanent --add-port=6007/tcp
 firewall-cmd --zone=public --permanent --add-port=6007/udp
 firewall-cmd --zone=public --permanent --list-ports
 ```
-## reload firewall
+### reload firewall
 ```
 firewall-cmd --reload
 ```
-## stop and disable firewalld in next boot
+### stop and disable firewalld in next boot
 ```
 systemctl stop firewalld
 systemctl disable firewalld
