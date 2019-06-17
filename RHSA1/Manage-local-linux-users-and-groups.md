@@ -2,12 +2,24 @@
 
 To create a local user: 
 ```
-useradd parscr
+#useradd parscr
 ```
-passwd sets passwords:
+#passwd sets passwords:
 ```
 passwd parscr
 ```
+The default settings for new user can viewed and modified using the -D option
+```
+#useradd -D 
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+```
+
 usermod modify existing users:
 ```
 usermod --help
