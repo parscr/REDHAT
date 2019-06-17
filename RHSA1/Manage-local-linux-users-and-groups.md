@@ -2,15 +2,15 @@
 
 To create a local user: 
 ```
-#useradd parscr
+# useradd parscr
 ```
-#passwd sets passwords:
+passwd sets passwords:
 ```
-passwd parscr
+# passwd parscr
 ```
 The default settings for new user can viewed and modified using the -D option
 ```
-#useradd -D 
+# useradd -D 
 GROUP=100
 HOME=/home
 INACTIVE=-1
