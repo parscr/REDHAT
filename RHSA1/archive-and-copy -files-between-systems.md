@@ -36,4 +36,4 @@ tar xzf
 ```
 Extract bz2 compressed tar archve
 ```
-tar xjf 
+tar xjf archive_name.tar.bz2 directory_to_compress
