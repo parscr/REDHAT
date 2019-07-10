@@ -2,8 +2,7 @@
 
 #### Install HTTPD
 ```
-yum install httpd
-yum install  
+yum install httpd 
 ```
 ```
 yum group list
@@ -40,7 +39,7 @@ vim /etc/httpd/conf.d/download.example.ox.ac.uk.conf
 ```
 <VirtualHost *:80>
     ServerAdmin craig.parsons@example.ox.ac.uk
-    ServerName download.eng.ox.ac.uk
+    ServerName download.example.ox.ac.uk
     ServerAlias www.download.example.ox.ac.uk
     DocumentRoot /var/www/html/download.example.ox.ac.uk/public_html/
     ErrorLog /var/www/html/download.example.ox.ac.uk/logs/error.log
@@ -63,9 +62,9 @@ vim /etc/httpd/conf.d/download.example.ox.ac.uk.conf
     ServerAdmin craig.parsons@example.ox.ac.uk
     ServerName download.example.ox.ac.uk
     ServerAlias www.download.example.ox.ac.uk
-    DocumentRoot /var/www/html/download.example.ox.ac.uk/public_html/
-    ErrorLog /var/www/html/download.example.ox.ac.uk/logs/error.log
-    CustomLog /var/www/html/download.example.ox.ac.uk/logs/access.log combined
+    DocumentRoot /datapart1/www/html/download.example.ox.ac.uk/public_html/
+    ErrorLog /datapart1/www/html/download.example.ox.ac.uk/logs/error.log
+    CustomLog /datapart1/www/html/download.example.ox.ac.uk/logs/access.log combined
 </VirtualHost>
 
 <Directory /datapart1/www/html>
