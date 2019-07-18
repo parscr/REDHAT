@@ -56,3 +56,11 @@ usermod -g student student
 ```
 usermod -aG groupname username
 ```
+Granting Sudo Privileges to a User 
+```
+usermod -aG username wheel
+```
+List user in the wheel group
+```
+sudo lid -g wheel
+```
