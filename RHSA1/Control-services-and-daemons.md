@@ -44,3 +44,31 @@ enabled | will be started at boot time
 disabled | will not be started at boot time
 static | can not be enabled but may be started by an enabled unit automatically
 
+
+LAB Controlling services and daemons.
+
+1. Start the psacct  service
+2. Configure the psacct service so that it starts at system boot
+3. Stop the rsyslog service 
+4. Configire ryslog service so that it does not start at systrem boot
+
+```
+systemctl start psacct
+systemctl status psacct
+```
+```
+systemctl enable psacct
+systemctl status psacct
+```
+```
+systemclt stop rsyslog
+systemctl is-active rsyslog
+```
+```
+systemctl disable rsyslog
+systemctl is-active rsyslog
+```
+
+
+
+
