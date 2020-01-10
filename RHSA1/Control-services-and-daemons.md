@@ -1,4 +1,4 @@
-Control services and daemons
+Controlling services and daemons
 
 service | systemctl | Description
 --------|----------|------------------
@@ -31,4 +31,16 @@ systemctl mask iptables
 systemctl umask iptables
 ```
 
+State of service.
+
+keyword | Description 
+--------|------------
+loaded | unit configuration has been processed 
+active (running) | running with one or more continuing processes
+active (exited) | succesfully completed a one-time configuration
+active (waiting) | running but waiting for an event
+inactivce | not running
+enabled | will be started at boot time
+disabled | will not be started at boot time
+static | can not be enabled but may be started by an enabled unit automatically
 
