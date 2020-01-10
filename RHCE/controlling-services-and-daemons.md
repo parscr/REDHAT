@@ -10,4 +10,4 @@ Runlevel | Target Units | Description
 3	 | runlevel3.target, multi user target | Set up a non-graphical multi-user system
 4	 | runlevel4.target, multi user target | Set up a non-graphical multi-user system
 5	 | runlevel5.target, graphical target  | Set up a graphical multi-user system
-6	 | runlevel6.target, reboot targetr    | Shut down and reboot the system
+6	 | runlevel6.target, reboot target    | Shut down and reboot the system
