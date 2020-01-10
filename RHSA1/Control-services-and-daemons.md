@@ -7,12 +7,14 @@ service name stop | systemctl stop service.name | stop and service
 service name restart | systemctl restart service.name | restart a service
 service name reload | systemctl reload service.name | reload a service
 service name status | systemctl status service.name | check if a service is ruinning
+service name status | systemclt is-active service.name | check is a service is running
 
 example enable, start and check the status of a service.
 ```
 systemctl enable httpd.service
 systemctl start httpd.serivce
 systemctl status httpd.service
+systemctl is-active httpd.service
 ```
 
 
