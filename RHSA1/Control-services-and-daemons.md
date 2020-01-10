@@ -25,7 +25,7 @@ chkconfig name off | systemctl disable service.name | disable a service
 chkconfig --list name | systemctl is-enabled service.name | check if a service is enabled
 chkconfig --list | systemctl list-unit-files --type service | list all services and check if they are enabled
 
-Masking services 
+masking and unmask a service 
 ```
 systemctl mask iptables 
 systemctl umask iptables
