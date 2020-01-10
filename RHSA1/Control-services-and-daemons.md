@@ -8,11 +8,13 @@ service name restart | systemctl restart service.name | restart a service
 service name reload | systemctl reload service.name | reload a service
 service name status | systemctl status service.name | check if a service is ruinning
 
+example enable, start and check the status of a service.
 ```
 systemctl enable httpd.service
 systemctl start httpd.serivce
 systemctl status httpd.service
 ```
+
 
 chkconfig | systemctl | Description 
 ----------|-----------|-------------
