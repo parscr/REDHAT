@@ -59,6 +59,7 @@ systemctl status psacct
 ```
 systemctl enable psacct
 systemctl status psacct
+systemctl is-enabled psacct
 ```
 ```
 systemclt stop rsyslog
