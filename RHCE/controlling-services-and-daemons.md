@@ -38,6 +38,7 @@ emergeny.targert | sulogin prompt, initramfs system root mounted on as read-only
 Lab Controlling Services and daemons
 
 1 Switch to the multi-user.target manually without rebooting
+
 2 Configure your server to automatically boot into the multi-user.target after a reboot (reboot to verify)
 
 ```
