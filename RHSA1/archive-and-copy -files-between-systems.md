@@ -45,4 +45,5 @@ lab
 tar cvf etc.tar /etc
 tar xvf etc.tar -C /tmp etc/passwd
 tar xjf home.tar 
+tar cvf backup.tar /home /etc
 ```
