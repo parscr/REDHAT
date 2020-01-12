@@ -40,3 +40,9 @@ lab
 2. Extract the password files to the /tmp directory
 3. Create a compressed archive of your /home directory
 4. Create one archive file that contains the contents of /home and /etc
+
+```
+tar cvf etc.tar /etc
+tar xvf etc.tar -C /tmp etc/passwd
+tar xjf home.tar 
+```
