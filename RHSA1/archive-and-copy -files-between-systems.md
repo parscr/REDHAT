@@ -11,7 +11,7 @@ tar cvf archivename.tar /files-you-want-to-backup
 tar tvf archivname.tar
 tar xvf archivename.tar
 ```
-extract files to a target direcory
+extract files to a target direcory (/tmp)
 ```
 tar -xvf archivename.tar -C /tmp
 ```
