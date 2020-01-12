@@ -36,7 +36,7 @@ tar uvf archivename.tar /files-you-want-to-update
 
 lab
 
-1 Archive the contents of the /etc directory
-2 Extract the password files to the /tmp directory
-3 create a compressed archive of your /home directory
-4 create one archive file that contains the contents of /home and /etc
+1. Archive the contents of the /etc directory
+2. Extract the password files to the /tmp directory
+3. Create a compressed archive of your /home directory
+4. Create one archive file that contains the contents of /home and /etc
