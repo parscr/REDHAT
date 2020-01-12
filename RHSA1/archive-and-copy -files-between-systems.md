@@ -25,7 +25,7 @@ tar cjf |Create bzip2 compressed tar archive
 tar cJf |Create xz compressed tar archive
 tar xzf |Extract gzip compressed tar archive
 tar xjf |Extract bz2 compressed tar archve
-tar xJf |Extract xx compresssed tar archive
+tar xJf |Extract xz compresssed tar archive
 
 Append Update the archive
 
