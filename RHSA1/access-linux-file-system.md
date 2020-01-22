@@ -1,9 +1,8 @@
 Accessing Linux File System
 
+mount
+
 locate
-```
-locate passwd 
-```
 
 find 
 
