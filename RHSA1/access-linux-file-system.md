@@ -1,6 +1,11 @@
 Accessing Linux File System
 
-Searching with find 
+locate
+```
+locate passwd 
+```
+
+find 
 
 option | Example | Description
 -------|---------|-------------
@@ -9,4 +14,6 @@ option | Example | Description
 -user | find / -user john | find all users owned by user john
 -size +N/-N | find / -size +5M | find files more then 5M in size 
 -exec | find / -exec | blurb
+
+
 
