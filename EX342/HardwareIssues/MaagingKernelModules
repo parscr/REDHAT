@@ -1,0 +1,10 @@
+Managing Kernel Modules
+
+Viewing loaded modules
+
+lsmod 
+
+Loading and unloading modules
+
+modprobe 
+mopdprob -r 

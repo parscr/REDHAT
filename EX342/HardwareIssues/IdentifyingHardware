@@ -1,0 +1,36 @@
+Identifying Hardware Issues
+
+Identifying CPU's 
+
+Identifying Memory
+
+Identifying Disks
+
+Identifying PCI Hardware
+
+Identifying USB Hardware
+
+Hardware Error Reporting 
+
+mcelog 
+
+yum install mcelog
+
+systemctl enable mce log
+systemctl start mcelog
+
+rasdaemon
+
+yum install rasdaemon
+
+systemctl enable rasdaemon
+systemctl start rasdaemon
+
+Memory Testing
+
+yum install memtest86+
+
+memtest-setup
+grub2-mkconfig -o /etc/grub2/grub.cfg
+
+

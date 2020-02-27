@@ -1,0 +1,60 @@
+Monitoring Systems.
+
+System monitoring with cockpit.
+
+install and confure cockpit.
+
+yum install -y cockpit
+systemctl start cockpit
+systemctl enable cockpit
+firewall-cmd --add-service=cockpit --permanent
+firewall-cmd --reload
+
+Using Performance co-pilot (PCP Lynda.com)
+
+Install and configure the Performance Co-Pilot.
+Query the pmcd daemon to display the per-CPU idle time for one minute
+Use the pmval command to obtain historical statistics of per-CPU idle time at one minute intervals from the most recent archive log. 
+Save the output into the /root/cpuidle file.
+
+yum install -y pcp
+systemctl start pmcd
+systemctl enable pmcd
+systemctl start pmlogger
+systemctl enable pmlogger
+pmval -T 1minute kernel.percpu.cpu.idle
+pcp
+pmval -t1minute kernel.percpu.cpu.idle -a /var/log/pcp/pmlogger/
+servera.lab.example.com/20151211.08.28.0 > /root/cpuidle
+
+CONFIGURE REMOTE LOGGING
+
+Configure remote logging, dir is /var/log/loghost/<hostname>/
+separate log for each syslog facility
+no sync, TCP, rotate
+
+server:
+in /etc/rsyslog.conf enable TCP section
+
+add lines in Rules section:
+$template DynamicFile,"/var/log/loghost/%HOSTNAME%/%syslogfacility-text%.log"
+. -?DynamicFile
+
+systemctl restart rsyslog
+
+firewall-cmd --add-port=514/tcp --permanent
+firewall-cmd --reload
+
+in /etc/logrotate.d/syslog add to locations: 
+"/var/log/loghost//.log"
+
+client:
+
+in /etc/rsyslog.conf uncomment: 
+. @@servera.lab.example.com:514
+
+systemctl restart rsyslog
+
+logger -p user.info "Test user.info message from serverb"
+logger -p authpriv.crit "Test authpriv.crit message from
+serverb"
