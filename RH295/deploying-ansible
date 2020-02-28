@@ -1,0 +1,51 @@
+The Inventory
+
+Static Inventory
+
+web1.example.com
+web2.example.com
+db1.example.com
+db2.example.com
+
+Host Groups
+
+[webservers]
+web1.example.com
+web2.example.com
+192.0.2.42
+[db-servers]
+db1.example.com
+db2.example.com
+
+Test the configuration of your inventory
+ansible webservers --list-hosts
+
+Ansible Configuration Files
+
+/etc/ansible/ansible.cfg
+Ansible global configuration file.
+
+~/.ansible.cfg
+This config file is used instead of the global file.
+
+./ansible.cfg
+If the ./ansible.cfg file exists in the working directory it will be used instead of  the global file or users personal file
+
+Example ansible.cfg
+[defaults]
+inventory = ./inventory
+[privilege_escalation]
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = true
+
+
+Running Ad Hoc Commands
+ansible host-pattern -m module [-a 'module arguments'] [-i inventory]
+
+ansible all -m ping
+
+ansible test -m shell -a 'hostname'
+
+ansible test -m copy -a 'src=/home/user/copyme dest=/home/user/copyme'
