@@ -23,9 +23,9 @@ command | Description
 tar czf |Create gzip compressed tar archive
 tar cjf |Create bzip2 compressed tar archive
 tar cJf |Create xz compressed tar archive
-tar xzf |Extract gzip compressed tar archive
-tar xjf |Extract bz2 compressed tar archve
-tar xJf |Extract xz compresssed tar archive
+tar xz |Extract gzip compressed tar archive
+tar xj |Extract bz2 compressed tar archve
+tar xJ |Extract xz compresssed tar archive
 
 Append Update the archive
 
