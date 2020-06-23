@@ -8,3 +8,7 @@ Create two directorys named season1 season2
 ```
 mkdir season{1..2}
 ```
+Create three subdirectores under your /home/student/Documents
+```
+mkdir ~/Documents/{dir1,dir2,dir3} 
+```
