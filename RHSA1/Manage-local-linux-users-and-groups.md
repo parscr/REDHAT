@@ -53,12 +53,17 @@ groupdel devops
 ```
 usermod -g student student
 ```
+Add user to group
 ```
 usermod -aG groupname username
 ```
-Granting Sudo Privileges to a User 
+Example add user to SUDO group 
 ```
 usermod -aG username wheel
+```
+Remove user from a group
+```
+gpasswd -d docker username
 ```
 List user in the wheel group
 ```
